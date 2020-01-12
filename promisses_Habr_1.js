@@ -19,6 +19,15 @@ let checkIfItsDone = () => {
         .then((ok) => {
             console.log(ok)
         })
+        .then(() => {
+            isItDoneYet
+                .then((ok) => {
+                    console.log(ok)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        })
         .catch((err) => {
             console.log(err)
         })
